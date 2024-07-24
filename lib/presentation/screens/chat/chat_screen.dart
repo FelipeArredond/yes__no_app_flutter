@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/received_message_bubble.dart';
+import 'package:yes_no_app/presentation/widgets/shared/message_field_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -16,7 +16,7 @@ class ChatScreen extends StatelessWidget {
             backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcPG-AcBI72PNAMs2lM0v-mUz1UCgJIYkyA&s'),
           ),
         ),
-        title: const Text('Gotica de al villa'),
+        title: const Text('Billie'),
         centerTitle: false,
       ),
       body: _ChatView(),
@@ -45,6 +45,9 @@ class _ChatView extends StatelessWidget {
                 },
               )
             ),
+            const SizedBox(height: 10),
+            const MessageFieldBox(),
+            const SizedBox(height: 10)
           ],
         ),
       ),
